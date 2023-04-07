@@ -4,7 +4,7 @@ import { appendHotDeals } from "./helpers/appendHotDeals.js";
 import { appendCategories } from "./helpers/appendCategories.js";
 import { getLocalStorage } from "./helpers/getLocalStorage.js";
 //API_URL
-const API_URL = "http://127.0.0.1:5500/assets/js/apis";
+const API_URL = "./assets/js/apis";
 
 // Fetching All The Products
 const { products } = await getAllProducts(`${API_URL}/products.json`);

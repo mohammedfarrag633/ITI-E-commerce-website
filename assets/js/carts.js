@@ -4,21 +4,24 @@ import { getLocalStorageForBadge } from "./helpers/getLocalStorageForBadge.js";
 const noCartDiv = document.getElementById("no-cart");
 const cartItemDiv = document.getElementById("cart-item");
 const cartItemRow = document.getElementById("cart-item-row");
-window.addEventListener("load", (e) => {
-  const localStorageCart = JSON.parse(localStorage.getItem("myCart")); // converting the JSON to Object
 
-  //checking the local Storage
+const localStorageCart = JSON.parse(localStorage.getItem("myCart")); // converting the JSON to Object
 
-  if (!localStorageCart) {
-    noCartDiv.style.display = "block";
-    cartItemDiv.style.display = "none";
-  } else {
-    noCartDiv.style.display = "none";
-    cartItemDiv.style.display = "block";
+//checking the local Storage
 
-    appendCartItems(localStorageCart);
-  }
-});
+if (!localStorageCart) {
+  noCartDiv.style.display = "block";
+  cartItemDiv.style.display = "none";
+} else {
+  noCartDiv.style.display = "none";
+  cartItemDiv.style.display = "block";
+
+  appendCartItems(localStorageCart);
+}
+
+function addToCart(id) {
+  console.log(id);
+}
 
 //append Cart Item
 function appendCartItems(cartItems) {

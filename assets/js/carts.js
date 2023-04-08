@@ -1,4 +1,4 @@
-import { getLocalStorage } from "./helpers/getLocalStorage.js";
+import { getLocalStorageForBadge } from "./helpers/getLocalStorageForBadge.js";
 
 //get all elements
 const noCartDiv = document.getElementById("no-cart");
@@ -17,4 +17,4 @@ window.addEventListener("load", (e) => {
     cartItemDiv.style.display = "block";
   }
 });
-getLocalStorage();
+getLocalStorageForBadge();

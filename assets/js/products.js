@@ -1,6 +1,6 @@
 //imports
 import { getAllProducts } from "./helpers/fetchAPI.js";
-import { getLocalStorage } from "./helpers/getLocalStorage.js";
+import { getLocalStorageForBadge } from "./helpers/getLocalStorageForBadge.js";
 //API_URL
 const API_URL = "./assets/js/apis";
 // Fetching All The Products
@@ -85,4 +85,4 @@ function addItemToCart(id) {
 }
 
 appendProducts();
-getLocalStorage();
+getLocalStorageForBadge();
